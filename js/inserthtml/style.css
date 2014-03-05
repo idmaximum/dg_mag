@@ -1,0 +1,23 @@
+ 
+
+.loading-bar {
+	padding: 10px 20px;
+	display: block;
+	text-align: center; 
+	margin: 20px 0;
+	font-size: 2em;
+	font-family: "museo-sans", sans-serif; 
+	margin-right: 1px;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+	clear:both;
+	/*position:fixed;
+	bottom:0*/
+} 
+#content-item p {
+	font-size: 2em;
+	line-height: 1.7em;
+	font-family: "museo-sans", sans-serif;
+	text-align: justify;	
+} 

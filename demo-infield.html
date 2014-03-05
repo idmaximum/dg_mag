@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>In-Field Labels jQuery Plugin</title>
+	<link rel="stylesheet" href="js/InFieldLabels/css/layout.css" type="text/css" media="all" charset="utf-8" />
+	
+	<script type="text/javascript" src="js/jquery-1.8.js"></script> 
+	<script src="js/InFieldLabels/jquery.infieldlabel.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(function(){ $("label").inFieldLabels(); });
+	</script>
+	<!--[if lte IE 6]>
+		<style type="text/css" media="screen">
+			form label {
+					background: #fff;
+			}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+	
+	<form action="js/InFieldLabels/index.html" method="get" accept-charset="utf-8" id="formSearch">
+		<fieldset>
+			<legend>Comment Form</legend>
+			<p>
+				<label for="name">Name</label><br />
+				<input type="text" name="name" value="" id="name">
+			</p>
+			<p>
+				<label for="email">Email</label><br />
+				<input type="text" name="email" value="" id="email">
+			</p>
+			<p>
+				<label for="website">Website</label><br />
+				<input type="text" name="website" value="" id="website">
+			</p>
+			<p>
+				<label for="comment">Comment</label><br />
+				<textarea cols="30" rows="10" name="comment" id="comment"></textarea>
+			</p>
+		</fieldset>
+		<p><input type="submit" value="Continue &rarr;"></p>
+	</form>
+	
+	<form action="js/InFieldLabels/index.html" method="get" accept-charset="utf-8">
+		<fieldset>
+			<legend>Login Form</legend>
+			<p>
+				<label for="username">Username</label><br />
+				<input type="text" name="username" value="" id="username">
+			</p>
+			<p>
+				<label for="password">Password</label><br />
+				<input type="password" name="password" value="" id="password">
+			</p>
+		</fieldset>
+		<p><input type="submit" value="Continue &rarr;"></p>
+	</form>
+	
+</body>
+</html>

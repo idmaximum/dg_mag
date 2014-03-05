@@ -1,0 +1,107 @@
+
+#container {
+	width: 400px;
+	margin: 10px;
+	min-height: 100%; /*ie hack*/
+}
+
+#content {
+	width: 220px;
+	margin: 0 auto;
+}
+
+#wrap {
+	overflow: hidden;
+	/*background: #fff url("images/wrapbg.gif") repeat-y top left;*/
+}
+
+h3 {
+	padding: 14px 0 14px 15px;
+	margin: 0;
+	font-size: 12px;
+	font-weight: normal;
+	color: #fff;
+	background: #282828;
+	cursor: pointer; 
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+}
+
+h3.toggler a {
+	color: #fff;
+	text-decoration: none;
+}
+
+h3.toggler a:hover {
+	color: #fff;
+}
+
+div.accordion {
+	background: #E0E0E3 ;	
+}
+
+div.accordion ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+
+div.accordion ul li {
+	padding: 6px 0;
+}
+
+div.accordion ul li a {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	padding: 4px 0px 4px 20px;
+	font-size: 90%;
+}
+
+div.accordion ul li a span {
+	padding-bottom: 10px;
+}
+
+div.accordion ul li a img {
+	border: 0;
+	vertical-align: bottom;
+	margin-right: 15px;
+}
+
+div.accordion ul li a:hover span {
+	text-decoration: underline;	
+}
+
+#top_round {
+	height: 10px;
+	font-size: 1px; /* ie whitespace */
+}
+
+#bottom_round {
+	height: 10px;
+	font-size: 1px; /* ie whitespace */
+}
+	
+.top_dark {
+	background: url("images/top_dark.gif") no-repeat top left;
+}
+
+.top_light {
+	background: url("images/top_light.gif") no-repeat top left;
+}
+
+.bottom_dark {
+	background: url("images/bottom_dark.gif") no-repeat top left;
+}
+
+.bottom_light {
+	background: url("images/bottom_light.gif") no-repeat top left;
+}
+
+.first {
+	padding-top: 6px;
+}
+
+.last {
+	padding-bottom: 6px;
+}

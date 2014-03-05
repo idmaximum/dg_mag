@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.txtBlack24 ,.txtBlack24 a{font-size: 24px;color: #000;text-decoration:none}
+.txtBlack30 ,.txtBlack30 a{font-size: 30px;color: #000;text-decoration:none}
+.txtBlack40 {font-size: 40px;color: #000;}
+.txtBlack11 {font-size: 11px;color: #000;}
+.txtBlack12,.txtBlack12 a {	font-size: 12px;color: #000; text-decoration:none} 
+.txtBlack13,.txtBlack13 a {	font-size: 13px;color: #000; text-decoration:none} 
+.txtBrown12,.txtBrown12 a {	font-size: 12px;color: #807676; text-decoration:none}
+.txtBlack14,.txtBlack14  a {	font-size: 14px;color: #000;text-decoration:none}
+.txtBlack14  a:hover ,.txtBlack12 a:hover { color:#666}
+.txtblue14,.txtblue14 a {	font-size: 14px;color: #4c90ee;text-decoration:none}
+.txtblue18,.txtblue18 a {	font-size: 18px;color: #8c76ff;text-decoration:none}
+.txtblue18_2,.txtblue18_2 a {	font-size: 18px;color: #4690e1;text-decoration:none}
+.txtblue24,.txtblue24 a {	font-size: 24px;color: #9c3996;text-decoration:none}
+.txtblue28_2,.txtblue28_2 a {	font-size: 28px;color: #4690e1;text-decoration:none}
+.txtblue30,.txtblue30 a {	font-size: 30px;color: #4690e1;text-decoration:none}
+.txtblue38,.txtblue38 a {	font-size: 38px;color: #8c76ff;text-decoration:none}
+.txtblue40,.txtblue40 a {	font-size: 40px;color: #8c76ff;text-decoration:none}
+.txtBlack18,.txtBlack18  a {	font-size: 18px;color: #000;text-decoration:none}
+.txtWhite11,.txtWhite11 a{ font-size: 11px;color: #FFF;text-decoration:none}
+.txtWhite12,.txtWhite12 a{ font-size: 12px;color: #FFF;text-decoration:none}
+.txtWhite14,.txtWhite14 a{ font-size: 14px;color: #FFF;text-decoration:none}
+.txtWhite16,.txtWhite16 a{ font-size: 16px;color: #FFF;text-decoration:none}
+.txtWhite18,.txtWhite18 a{ font-size:18px;color: #FFF;text-decoration:none}
+.txtWhite25,.txtWhite25 a{ font-size:25px;color: #FFF;text-decoration:none}
+.txtWhite38,.txtWhite38 a{ font-size:38px;color: #FFF;text-decoration:none}
+.txtWhite42,.txtWhite42 a{ font-size:42px;color: #FFF;text-decoration:none}
+.txtBrown11,.txtBrown11 a{ font-size: 11px;color: #929292;text-decoration:none}
+.txtBrown12,.txtBrown12 a{ font-size: 12px;color: #929292;text-decoration:none}
+.txtBrown13,.txtBrown13 a{ font-size: 12px;color: #929292;text-decoration:none}
+.txtBrown14,.txtBrown14 a{ font-size: 14px;color: #929292;text-decoration:none}
+.txtBrown12_2,.txtBrown12_2 a{ font-size: 12px;color: #919193;text-decoration:none}
+.txtBrown14_2,.txtBrown14_2 a{ font-size: 14px;color: #919193;text-decoration:none}
+.txtBrown16_2,.txtBrown16_2 a{ font-size: 16px;color: #919193;text-decoration:none}
+.txtBrown18_2,.txtBrown18_2 a{ font-size: 18px;color: #919193;text-decoration:none}
+.txtBrown24,.txtBrown24 a{ font-size: 24px;color: #696969;text-decoration:none}
+.txtpink12,.txtpink12 a{ font-size: 12px;color: #666666;text-decoration:none}
+.txtpink13,.txtpink13 a{ font-size: 13px;color: #666666;text-decoration:none}
+.txtpink14,.txtpink14 a{ font-size: 14px;color: #666666;text-decoration:none}
+.txtBrown30,.txtBrown30 a{ font-size: 30px;color: #696969;text-decoration:none}
+.txtOrange14,.txtOrange14 a{ font-size: 14px;color: #a9ca47;text-decoration:none}
+.txtRed11,.txt_11_red{ color:#F00; font-size: 11px; text-decoration:none}
+.txtRed12,.txt_12_red{ color:#F00; font-size: 12px; text-decoration:none}
+.txtGreen12,.txt_12_green{color:#5b9002;font-size: 12px;}
+.txtRed24{ color:#F00; font-size: 24px; }
+.txtRed18{ color:#F00; font-size: 18px; }
+.txtRed14,.txtRed14 a{ color:#F00; font-size: 14px; text-decoration:none}
+.txtBlack24_2,.txtBlack24_2 a {font-size: 24px;	color: #000;text-decoration:none}
+.txtOrange24{font-size: 24px;color: #F04416;}
+.txtOrange36,.txtOrange36 a{ font-size: 36px;color: #F04416;text-decoration:none}
+.txtOrange40,.txtOrange40 a{ font-size: 40px;color: #F04416;text-decoration:none}
+.txtOrange22,.txtOrange22 a{ font-size: 22px;color: #F04416;text-decoration:none}
+.txt_din16 ,.txt_din16 a{color: #667500;font-size: 16px; text-decoration:none}
+.txt_din16  a:hover {color:#95AA00}
+.txtGreen14,.txtGreen14 a{ font-size: 14px;	color: #5b9002; text-decoration:none}
+.txtGreen14_2,.txtGreen14_2 a{ font-size: 14px;	color: #cca400; text-decoration:none}
+.txtTittle-14,.txtTittle-14 a{ font-size: 16px;	color: #549908; text-decoration:none}
+.txt18{font-size: 18px;	}

@@ -1,0 +1,1 @@
+<div class="footer-copyright  txtBlack11">© 2014. Power by <a href="http://www.idmaximum.com" target="_blank">www.idmaximum.com</a></div>

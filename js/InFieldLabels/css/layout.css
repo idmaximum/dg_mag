@@ -1,0 +1,4 @@
+form#formSearch p { position: relative; margin: 0px 0;}
+form#formSearch p label { position: absolute; top: 0; left: 0;}
+form#formSearch p br {display: none;}
+
