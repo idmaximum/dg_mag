@@ -47,7 +47,8 @@
 		$SetReduceWidth = "220";
 		$SetReduceHeight = "192";	
 		#=========================================================================		
-		$item_title = mosGetParam( $_FORM, 'item_title', '');		
+		$item_title = mosGetParam( $_FORM, 'item_title', '');	
+		$item_youtube = mosGetParam( $_FORM, 'item_youtube', '');		
 		$item_abstract = mosGetParam( $_FORM, 'item_abstract', '');
 		$item_detail = mosGetParam( $_FORM, 'item_detail', '', 2 );
 		
@@ -81,12 +82,12 @@
 			"insert into $_Config_table[item] (item_title, item_abstract, item_detail, 
 			  item_image, item_image_thumb, 
 			  item_category_id_FK, item_sub_category_id_FK, 
-			  item_publish, item_create_date, item_create_user,item_update_date) 
+			  item_publish, item_create_date, item_create_user,item_update_date,item_youtube) 
 			values
 			($DB->qstr('$item_title'), $DB->qstr('$item_abstract'), $DB->qstr('$item_detail'),  
 			'$upload1[sFileName]','$upload1[sThumbnail]', 
 			 $DB->qstr('$category_id'), $DB->qstr('$sub_category_id'),  
-			'$item_publish', now(), '$_SESSION[_ID]',  now())";
+			'$item_publish', now(), '$_SESSION[_ID]',  now(), $DB->qstr('$item_youtube'))";
 			 // echo $qryHeader;
 			$DB->Execute($qryHeader);	
 			 		
@@ -168,6 +169,15 @@
             </div>
           </div>
            <?php }?>
+           
+             <div class="form-group">
+            <label for="item_youtube" class="col-lg-3 control-label">Link Youtube</label>
+            <div class="col-lg-9">
+              <input name="item_youtube" type="text" class="form-control" id="item_youtube" placeholder="ตัวอย่าง http://www.youtube.com/watch?v=jT_TOhyfEXE" value="<?php echo $item_youtube?>">
+            </div>
+          </div>
+           
+           
           <div class="form-group">
             <label for="exampleInputFile" class="col-lg-3 control-label">อัพโหลดรูปประกอบ</label>
             <div class="col-lg-9">

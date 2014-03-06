@@ -156,8 +156,11 @@
 				While($row_banner = $rsSel1->FetchRow()){
 				?>
                     <tr id="<?php echo $row_banner["banner_id"];?>">
-                      <td><?php echo $row_banner["banner_name"];?> <em><span class="txtRed14"><?php echo ($row_banner["publish"]=="0")? "ไม่เผยแพร่" : ""; ?></span></em><br />
-                        จำนวนคลิก : <?php echo $row_banner["click"];?> </td>
+                      <td><?php echo $row_banner["banner_name"];?><br />
+                        จำนวนคลิก : <?php echo $row_banner["click"];?><br />
+                      จำนวนแสดงผล : <?php echo $row_banner["visited"];?> <br />
+					  วันที่เริ่มต้นแสดง : <?php echo date("Y-m-d", strtotime($row_banner["bannerStartDate"]));  ?><br />
+                       วันที่สิ้นสุดการแสดง : <?php echo date("Y-m-d", strtotime($row_banner["bannerStartDate"]));  ?><br /></td>
                       <td align="center"><img src="<?php echo "../uploads/banner/$row_banner[banner_pic]"?>" style="max-width:400px"  /></td>
                       <td align="center"><a href="banner_edit.php?banner_id=<?=$row_banner["banner_id"]?>&category_id=<?php echo $category_id; ?>#banner"><img src="images/png/glyphicons_030_pencil.png" width="20" height="20" /></a></td>
                       <td align="center"><input name="id[]" type="checkbox" class="medium2" value="<?=$row_banner["banner_id"]?>" /> </td>

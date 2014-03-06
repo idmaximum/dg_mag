@@ -22,13 +22,17 @@
 <body>
 
 <?php 
+	 $date = "http://www.youtube.com/watch?v=pShtI7XHkus";
+   
+
+
 	  $qryDetailUnlike  = "select * from $_Config_table[item] where item_id = '7'";
 		$rsDetailUnlike   = $DB->Execute($qryDetailUnlike);
 		$detailitemUnlike = $rsDetailUnlike->FetchRow(); 
 		
 		$item_like = $detailitemUnlike["item_like"];
 		
-	echo $item_like =$item_like+(-1);
+	//echo $item_like =$item_like+(-1);
 ?>
 <div style="border: 3px solid white; border-radius: 25px;
 height:40px; width:40px;

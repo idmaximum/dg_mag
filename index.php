@@ -266,6 +266,62 @@
     </div>
     <div class="content-item">
       <div class="content-side-left">
+        <div><span class="title-category">How To</span> &nbsp; &nbsp; <span class="txtpink14"><a href="item.php?item_category_id=5">View all  &nbsp; <img src="images/bullet-view.gif" width="11" height="12"/></a></span></div>
+        <ul class="bxslider-item">
+          <?php
+				$qrySel1 = "select item_image_thumb,item_title ,item_id,item_like,item_comment
+							from $_Config_table[item] 
+							where item_publish != '0' and item_category_id_FK = '5'
+							order by order_by, item_id desc limit 0,9 ";	
+				//echo $qrySel1;
+				$rsSel1 = $DB->Execute($qrySel1); 
+				While($row_item = $rsSel1->FetchRow()){ 
+			?>
+          <li>
+            <div class="img-thumb-content">
+              <div class="item-img item-img-frist"> <img src="uploads/item/<?php echo $row_item["item_image_thumb"];?>" alt="<?php echo $row_item["item_title"];?>" />
+                <div class="bg-thumb-item"><a href="itemDetail.php?item_id=<?php echo $row_item["item_id"];?>"><?php echo FU::strCrop($row_item["item_title"],28);?></a></div>
+                <div class="mask"> <a href="itemDetail.php?item_id=<?php echo $row_item["item_id"];?>" class="info"></a>
+                  <p><a href="pinItem.php?item_id=<?php echo $row_item["item_id"];?>" class="pinToBoard"><img src="images/add-to-pin.png" alt="add to pin" width="165" height="40"></a></p>
+                </div>
+              </div>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12%"><img src="images/3_hover_thumbnail_13.png" alt="like" width="17" height="14"/></td>
+                <td width="65%"><?php echo $row_item["item_like"];?></td>
+                <td width="15%"><img src="images/3_hover_thumbnail_15.png" alt="comment" width="18" height="14"/></td>
+                <td width="8%"><?php echo $row_item["item_comment"];?></td>
+              </tr>
+            </table>
+            <p class="clear"></p>
+          </li>
+          <?php }?>
+        </ul>
+      </div>
+      <div class="content-side-right">
+        <p style="text-align:right"><a href="#"><img src="images/sponsored-item.gif" width="85" height="18"class="hoverImg09"/></a></p>
+        <div class="div-sponsored">
+          <?php
+            $qrySelBanner = "select banner_url,banner_name,banner_swf,banner_pic,banner_id
+								 from $_Config_table[banner]  
+								where publish != '0' and bannerCategoryID_FK = '4'
+								order by rand()";	
+			$rsSelPicBanner = $DB->Execute($qrySelBanner);	 
+			$rowPicBanner = $rsSelPicBanner->FetchRow();
+		 ?>
+          <a href="<?php echo $rowPicBanner["banner_url"];?>" target="_blank" id="<?php echo $rowPicBanner["banner_id"];?>" class="banner-front-page banner-page"><img src="images/banner-thumb-page.png" width="220" height="220" class="hoverImg09"/></a>
+          <?php if($rowPicBanner["banner_swf"] == ""){ ?>
+          <img src="uploads/banner/<?php echo $rowPicBanner["banner_pic"];?>" alt="banner <?php echo $rowPicBanner["banner_name"];?>" class="hoverImg09"/>
+          <?php }else{?>
+          <a  class="media {width:220, height:220}" href="uploads/banner/<?php echo $rowPicBanner["banner_swf"];?>"></a>
+          <?php  } #end if?>
+        </div>
+      </div>
+      <p class="clear"></p>
+    </div>
+    <div class="content-item">
+      <div class="content-side-left">
         <div><span class="title-category">Like &amp; Share</span> &nbsp; &nbsp; <span class="txtpink14"><a href="item.php?item_category_id=4">View all  &nbsp; <img src="images/bullet-view.gif" width="11" height="12" alt="bullet-view"/></a></span></div>
         <ul class="bxslider-item">
           <?php

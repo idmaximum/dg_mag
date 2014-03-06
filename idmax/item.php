@@ -251,7 +251,7 @@
 	
 	 jQuery(".galleryPage").fancybox({
 		'width'				: 900, 
-		 'height'			: 560,
+		 'height'			: '90%',
 		 'padding'	: 0,
 		'autoScale'     	: false,
 		'transitionIn'		: 'none',

@@ -68,7 +68,13 @@
 <link rel="stylesheet" href="js/formValidator/css/validationEngine.jquery.css" type="text/css"/>
 <link href="js/bxslider-4-master/jquery.bxslider_2.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="js/jquery.fancybox/fancybox/jquery.fancybox-1.3.4.css" media="screen" /> 
-<link href="css/itemDetail.css" rel="stylesheet" type="text/css" /> 
+<link href="css/itemDetail.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#main-content .bxslider li {
+	vertical-align: middle!important;
+	display: table-cell!important;
+}
+</style>
 </head> 
 <body> 
 <div id="loading-page"></div>
@@ -80,8 +86,11 @@
   </tr>
 </table> 
   <p>&nbsp;</p>
-  <p style="text-align:center"></p>
+  <p style="text-align:center"></p> 
   <ul class="bxslider"> 
+    <?php if($detailitem["item_youtube"] != ""){
+		   $item_youtube = substr($detailitem["item_youtube"],-11,11);
+		?><li><iframe width="640" height="480" src="//www.youtube.com/embed/<?php echo $item_youtube?>" frameborder="0" allowfullscreen></iframe></li><?php }?>
     <li><img src="uploads/item/<?php echo $detailitem["item_image"];?>" /></li>
       <?php
 		  $qryTipsImg = "select * from $_Config_table[itemimage] where item_id='$item_id' ";
@@ -233,7 +242,7 @@
               <?php echo $spCommentMember['primary_email']?>
             <?php }?>
           </span></strong>
-            <span class="txtBrown14"><?php   echo date("d F Y", strtotime("$spitemComment[dateTimeComment]"));?></span></p>
+            <span class="txtBrown14"><?php   echo date("d F Y  H:i", strtotime("$spitemComment[dateTimeComment]"));?></span></p>
             <p class="txtBlack14"><?php echo nl2br($spitemComment["comment"])?></p></td>
           </tr>
         </table>
@@ -242,6 +251,7 @@
     </div> 
   </div>
 </div>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -256,8 +266,10 @@
 <script src="js/bxslider-4-master/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script type="text/javascript" src="js/jquery.corner.js"></script>
+<script type="text/javascript" src="js/swf/jquery.media.js"></script> 
 <script>
   jQuery(document).ready(function(){
+	  jQuery('a.media').media();
 	  jQuery("#loading-page").show(100).delay(800).fadeOut(600);
 	  // binds form submission and fields to the validation engine
 	  jQuery("#formID").validationEngine(); 

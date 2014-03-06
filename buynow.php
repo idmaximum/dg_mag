@@ -19,8 +19,9 @@
 	$url = trim(mosGetParam($_REQUEST,'url',''));  
 	
 	 if($url == ""){# เช็ดดูว่าใช่ spam หรือป่าว ############### Vote	
-		if( isset($action) && !empty($action) && $action == "commentWebboard" && eregi($_SERVER['HTTP_HOST'],$_SERVER['HTTP_REFERER']) ){   
-
+		if( isset($action) && !empty($action) && $action == "commentWebboard" && eregi($_SERVER['HTTP_HOST'],$_SERVER['HTTP_REFERER']) ){    
+			
+			$buynow_order = trim(mosGetParam($_FORM,'buynow_order',''));
 			$name = trim(mosGetParam($_FORM,'name',''));
 			$tel = trim(mosGetParam($_FORM,'tel',''));
 			$email = trim(mosGetParam($_FORM,'email',''));
@@ -30,10 +31,10 @@
 			
 			$qryAddBuyNow =  "insert into $_Config_table[buynow]
 								  ( newsID_FK, buynow_name,buynow_email,buynow_tel,
-								   buynow_address,buynow_detail,buynow_create_date,buynow_ip) 
+								   buynow_address,buynow_detail,buynow_create_date,buynow_ip,buynow_order) 
 							 	 values
 						 	   ( $DB->qstr('$news_id'),$DB->qstr('$name'),$DB->qstr('$email'),$DB->qstr('$tel')
-							   ,$DB->qstr('$address'),$DB->qstr('$detail') ,now(),$DB->qstr('$Rip') )";
+							   ,$DB->qstr('$address'),$DB->qstr('$detail') ,now(),$DB->qstr('$Rip'),$DB->qstr('$buynow_order') )";
 			 $DB->Execute($qryAddBuyNow);	
 			 
 			  mosRedirect("buynowComplate.php");
@@ -84,7 +85,7 @@ body {
 }
 .formError {
 	left: 200px !important;
-}
+} .form-group{ margin-bottom:10px}
 </style>
 </head>
 
@@ -106,6 +107,14 @@ body {
           <tr>
             <td width="100%" style=" ">
             <form action="" method="post" id="formID"  role="form">
+              <div class="form-group"> 
+               
+               <select class="validate[required] form-control" name="buynow_order" id="buynow_order" style="height:32px; width:325px">
+                <option value="">---เลือกการสั่งซื้อ---</option>
+                <option value="สั่งซื้อรายเดือน">สั่งซื้อรายเดือน</option>
+                <option value="สั่งซื้อรายปี">สั่งซื้อรายปี</option> 
+              </select>
+              </div>
               <div class="form-group"> 
                <input name="name" type="text" class="validate[required] form-control width300" id="name" placeholder="Name" value="<?php echo $_SESSION['NameDisplay']?>">
               </div>

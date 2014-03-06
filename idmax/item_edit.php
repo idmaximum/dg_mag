@@ -48,7 +48,8 @@
 		$SetReduceWidth = "220";
 		$SetReduceHeight = "192";		
 		#=========================================================================		
-		$item_title = mosGetParam( $_FORM, 'item_title', '', 2 );		
+		$item_title = mosGetParam( $_FORM, 'item_title', '' );		
+		$item_youtube = mosGetParam( $_FORM, 'item_youtube', '');	
 		$item_abstract = mosGetParam( $_FORM, 'item_abstract', '', 2 );
 		$item_detail = mosGetParam( $_FORM, 'item_detail', '', 2 );
 		
@@ -85,6 +86,7 @@
 			"update $_Config_table[item] set 
 			  item_title=$DB->qstr('$item_title'), 
 			  item_abstract=$DB->qstr('$item_abstract'),  
+			  item_youtube=$DB->qstr('$item_youtube'),     
 		   		
 			  item_image='$upload1[sFileName]', 
 			  item_image_thumb='$upload1[sThumbnail]',
@@ -159,6 +161,12 @@
             <label for="item_abstract" class="col-lg-3 control-label">รายละเอียด</label>
             <div class="col-lg-9">
               <textarea name="item_abstract" id="item_abstract" cols="90" rows="10" class="validate[required] form-control"  placeholder="รายละเอียด"><?php echo clearText($detail["item_abstract"]); ?></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="item_youtube" class="col-lg-3 control-label">Link Youtube</label>
+            <div class="col-lg-9">
+              <input name="item_youtube" type="text" class="form-control" id="item_youtube" value="<?php echo clearText($detail["item_youtube"]); ?>"placeholder="Link Youtube">
             </div>
           </div>
            <?php if($languageMulti == 2){?>

@@ -17,30 +17,37 @@
 	$keyword = mosGetParam( $_FORM, 'keyword', '' );
 	$item_category_id = mosGetParam( $_FORM, 'item_category_id', '' );
 	
-	$qrySel_searchAll = "select * from $_Config_table[item] 
+	$qrySel_searchAll = "select item_id from $_Config_table[item] 
 					 where item_publish != '0' and  (item_title like '%$keyword%' )";
 	$rsSel_searchAll = $DB->Execute($qrySel_searchAll);
 	$numrowsAll = $rsSel_searchAll->RecordCount();
 	
-	$qrySel_searchDes = "select * from $_Config_table[item] 
+	$qrySel_searchDes = "select item_id from $_Config_table[item] 
 					 	 where item_publish != '0' and item_category_id_FK = '1'
 					 	 and  (item_title like '%$keyword%' )";
 	$rsSel_searchDes = $DB->Execute($qrySel_searchDes);
 	$numrowsDes = $rsSel_searchDes->RecordCount();
 	
-	$qrySel_searchKit = "select * from $_Config_table[item] 
+	$qrySel_searchKit = "select item_id from $_Config_table[item] 
 					 	 where item_publish != '0' and item_category_id_FK = '2'
 					 	 and  (item_title like '%$keyword%' )";
 	$rsSel_searchKit = $DB->Execute($qrySel_searchKit);
 	$numrowsKit = $rsSel_searchKit->RecordCount();
 	
-	$qrySel_searchShopping = "select * from $_Config_table[item] 
+	$qrySel_searchHowTo = "select item_id from $_Config_table[item] 
+					 	 where item_publish != '0' and item_category_id_FK = '5'
+					 	 and  (item_title like '%$keyword%' )";
+	$rsSel_searchHowTo = $DB->Execute($qrySel_searchHowTo);
+	$numrowsHowTo = $rsSel_searchHowTo->RecordCount();
+	
+	
+	$qrySel_searchShopping = "select item_id from $_Config_table[item] 
 					 	 where item_publish != '0' and item_category_id_FK = '3'
 					 	 and  (item_title like '%$keyword%' )";
 	$rsSel_searchShopping = $DB->Execute($qrySel_searchShopping);
 	$numrowsShopping = $rsSel_searchShopping->RecordCount();
 	
-	$qrySel_searchLike = "select * from $_Config_table[item] 
+	$qrySel_searchLike = "select item_id from $_Config_table[item] 
 					 	 where item_publish != '0' and item_category_id_FK = '4'
 					 	 and  (item_title like '%$keyword%' )";
 	$rsSel_searchLike = $DB->Execute($qrySel_searchLike);
@@ -96,6 +103,12 @@
              <div class="row">
               <div class="col-md-8"><a href="search.php?keyword=<?php echo $keyword;?>&item_category_id=2" class="txtpink14">Kitchen</a></div>
               <div class="col-md-4"><?php echo $numrowsKit?></div>
+            </div>
+            <p class="line-search"></p>
+            
+              <div class="row">
+              <div class="col-md-8"><a href="search.php?keyword=<?php echo $keyword;?>&item_category_id=5" class="txtpink14">How To</a></div>
+              <div class="col-md-4"><?php echo $numrowsHowTo?></div>
             </div>
             <p class="line-search"></p>
             
